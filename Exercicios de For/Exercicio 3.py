@@ -18,7 +18,7 @@ print('apenas {:.1%} dos vendedores bateram a meta'.format(len(bateram_meta) / l
 
 
 
-#Definindo quem foi o vendedor que vendeu 
+#Definindo quem foi o vendedor que mais vendeu 
 
 melhor_vendedor = ''
 maior_venda = 0
