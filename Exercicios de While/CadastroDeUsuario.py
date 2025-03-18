@@ -8,16 +8,15 @@ while True:
         nome = nome.title()
         break
     
-
+idade = int(input('Idade '))
 while True:
     try:
-        idade = int(input('Idade '))
         if idade < 0 or idade > 150:
             idade = int(input('Idade inválida. Digite sua idade novamente:  '))
         else:
             break
     except ValueError:
-        print('Por favor insira um nuemero valido para a idade ')
+        print('Por favor insira um numero valido para a idade ')
 
 print('''\nNome: {}
 Idade: {}'''.format(nome, idade))
