@@ -1,11 +1,10 @@
-nome = input('Nome ').strip().capitalize()
+nome = input('Nome ').strip().title()
 while True:
     if len(nome) <= 3:
-        nome = input('Nome inválido. Digite seu nome novamente: ').strip().capitalize().isalpha()
+        nome = input('Nome inválido. Digite seu nome novamente: ').strip().title()
     elif not nome.replace(' ', '').isalpha():
-        nome = input('Nome inválido. Digite seu nome novamente: ').strip().capitalize().isalpha()
+        nome = input('Nome inválido. Digite seu nome novamente: ').strip().title()
     else:
-        nome = nome.title()
         break
     
 idade = int(input('Idade '))
