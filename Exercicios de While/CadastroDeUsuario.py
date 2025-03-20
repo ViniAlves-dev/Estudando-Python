@@ -1,15 +1,13 @@
 #Pegando nome do usuario
-nome = input('Nome completo: ').strip().title()
 while True:
+    nome = input('Nome completo: ').strip().title()
     if len(nome) <= 3:
-        print('Nome inválido. Digite seu nome novamente: ')
-        continue
+       print('Nome invalido. Digite novamnete')
+
     elif not nome.replace(' ', '').isalpha(): #substiui os espaços e verifica se contem apenas letras no nome
-        print('Nome inválido. Digite seu nome novamente: ')
-        continue
+        print('Nome inválido. Digite novamente: ')
     elif " " not in nome:  # Se não houver espaços no nome
         print("Parece que você digitou tudo junto. Digite seu nome completo corretamente: ")
-        continue
 
     else:
         break
