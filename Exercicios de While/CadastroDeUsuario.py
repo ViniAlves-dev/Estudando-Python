@@ -1,8 +1,12 @@
-#Pegando nome do usuario
+#biblioteca de cores apenas para ilustrar melhor os erros digitados pelo usuario
+from colorama import Fore, Back, Style, init
+init(autoreset=True)
+
+#Cadastrando nome do usuario
 while True:
     nome = input('Nome completo: ').strip().title()
     if len(nome) <= 3:
-       print('Nome invalido. Digite novamnete')
+       print(Back.RED + 'Nome invalido. Digite novamnete')
 
     elif not nome.replace(' ', '').isalpha(): #substiui os espaços e verifica se contem apenas letras no nome
         print('Nome inválido. Digite novamente: ')
@@ -12,7 +16,7 @@ while True:
     else:
         break
     
-#Pegando idade do usuario
+#Cadastrando idade do usuario
 while True:
     try:
         idade = int(input('Idade ').strip())
@@ -24,13 +28,30 @@ while True:
         print('Por favor insira um numero valido para a idade ')
 
 
-#Pegando salario do usuario
+#Cadastrando salario do usuario
+while True:
+    try: 
+        salario = int(input('Salario (apenas numeros): ').strip())
+        if salario < 0:
+            print('Salario invalido. Digite um valor maior ou igual a 0.')
 
-salario = input('Salario').strip()
+        else:
+            break
+    except ValueError:
+        print('Salario invalido. Digite novamente.')
+
+#Cadastrando sexo do usuario
+while True:
+    sexo = input('Sexo: Digite M para masculino ou F para feminino  ').upper().strip()
+    if sexo not in 'MFmf ':
+        print('Sexo inválido! Digite M para masculino ou F para feminino')
+    elif len(sexo) > 1:
+        print('Sexo inválido! Digite M para masculino ou F para feminino')
+    else:   
+        break
 
 
-
-
-
-print('''\nNome: {}
-Idade: {}'''.format(nome, idade))
+print(f'''\nNome: {nome}
+Idade: {idade}
+Salário: ${salario:.2f}
+Sexo: {sexo}''')
