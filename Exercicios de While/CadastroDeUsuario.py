@@ -43,15 +43,20 @@ while True:
 #Cadastrando sexo do usuario
 while True:
     sexo = input('Sexo: Digite M para masculino ou F para feminino  ').upper().strip()
-    if sexo not in 'MFmf ':
+    if sexo not in 'MF':
         print('Sexo inválido! Digite M para masculino ou F para feminino')
+            
     elif len(sexo) > 1:
         print('Sexo inválido! Digite M para masculino ou F para feminino')
     else:   
         break
 
+if sexo == "M":
+    sexo_formatado = "Masculino"
+else:
+    sexo_formatado = "Feminino"
 
 print(f'''\nNome: {nome}
 Idade: {idade}
 Salário: ${salario:.2f}
-Sexo: {sexo}''')
+Sexo: {sexo_formatado}''')
