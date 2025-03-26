@@ -22,7 +22,7 @@ while True:
         idade = int(input('Idade ').strip())
         if idade < 0 or idade > 150:
             print('Idade inválida. Digite sua idade novamente:  ')        
-        else:
+        else:  #
             break
     except ValueError:
         print('Por favor insira um numero valido para a idade ')
@@ -51,6 +51,9 @@ while True:
     else:   
         break
 
+while True:
+    estado_civil = input("Estado civil: ")
+    
 if sexo == "M":
     sexo_formatado = "Masculino"
 else:
@@ -59,4 +62,6 @@ else:
 print(f'''\nNome: {nome}
 Idade: {idade}
 Salário: ${salario:.2f}
-Sexo: {sexo_formatado}''')
+Sexo: {sexo_formatado}
+''')
+
